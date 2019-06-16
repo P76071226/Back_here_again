@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2018 Google Inc.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.Rays_happy_friends.MainActivity">
+
+    <Button
+        android:id="@+id/button_toast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary"
+        android:onClick="showToast"
+        android:text="Scoreboard"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_start"
+        app:layout_constraintTop_toBottomOf="@+id/angel_16"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:text="@string/count_initial_value"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timer" />
+
+    <Button
+        android:id="@+id/button_zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#888888"
+        android:onClick="rst"
+        android:text="Pause"
+        app:layout_constraintEnd_toStartOf="@+id/button_start"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/angel_13" />
+
+    <ImageButton
+        android:id="@+id/angel_1"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit1"
+        app:layout_constraintEnd_toStartOf="@+id/angel_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/show_count"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_2"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit2"
+        app:layout_constraintEnd_toStartOf="@+id/angel_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_1"
+        app:layout_constraintTop_toBottomOf="@+id/show_count"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_3"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit3"
+        app:layout_constraintEnd_toStartOf="@+id/angel_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_2"
+        app:layout_constraintTop_toBottomOf="@+id/show_count"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_4"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_3"
+        app:layout_constraintTop_toBottomOf="@+id/show_count"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_5"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit5"
+        app:layout_constraintEnd_toStartOf="@+id/angel_6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/angel_1"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_6"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit6"
+        app:layout_constraintEnd_toStartOf="@+id/angel_7"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_5"
+        app:layout_constraintTop_toBottomOf="@+id/angel_2"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_7"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit7"
+        app:layout_constraintEnd_toStartOf="@+id/angel_8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_6"
+        app:layout_constraintTop_toBottomOf="@+id/angel_3"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_8"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_7"
+        app:layout_constraintTop_toBottomOf="@+id/angel_4"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_9"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit9"
+        app:layout_constraintEnd_toStartOf="@+id/angel_10"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/angel_5"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_10"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit10"
+        app:layout_constraintEnd_toStartOf="@+id/angel_11"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_9"
+        app:layout_constraintTop_toBottomOf="@+id/angel_6"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_11"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit11"
+        app:layout_constraintEnd_toStartOf="@+id/angel_12"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_10"
+        app:layout_constraintTop_toBottomOf="@+id/angel_7"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_12"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_11"
+        app:layout_constraintTop_toBottomOf="@+id/angel_8"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_13"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit13"
+        app:layout_constraintEnd_toStartOf="@+id/angel_14"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/angel_9"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_14"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit14"
+        app:layout_constraintEnd_toStartOf="@+id/angel_15"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_13"
+        app:layout_constraintTop_toBottomOf="@+id/angel_10"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_15"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit15"
+        app:layout_constraintEnd_toStartOf="@+id/angel_16"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_14"
+        app:layout_constraintTop_toBottomOf="@+id/angel_11"
+        app:srcCompat="@drawable/angel" />
+
+    <ImageButton
+        android:id="@+id/angel_16"
+        android:layout_width="63dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:onClick="hit16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/angel_15"
+        app:layout_constraintTop_toBottomOf="@+id/angel_12"
+        app:srcCompat="@drawable/angel" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Ready?"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="start"
+        android:text="START"
+        app:layout_constraintEnd_toStartOf="@+id/button_toast"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button_zero"
+        app:layout_constraintTop_toBottomOf="@+id/angel_15" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="-16dp" />
+
+    <Button
+        android:id="@+id/button_difficult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="LEVEL"
+        android:onClick="ChangeLevel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_start" />
+</android.support.constraint.ConstraintLayout>
