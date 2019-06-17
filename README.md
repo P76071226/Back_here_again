@@ -19,4 +19,4 @@ If you want to challenge higher level, you can push the button to change the dif
 - Mao:The programmer.
 - Jacky:The game tester, he helps us debugging.
 
-## Spacial Thanks:Our big fans Wu, the legendary player who got 10000 points.
+## Spacial Thanks:Our big fans, Wu, the legendary player who has played this game more than 1000 times.
