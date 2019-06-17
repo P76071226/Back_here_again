@@ -18,4 +18,5 @@ If you want to challenge higher level, you can push the button to change the dif
 - Clw:The programmer.
 - Mao:The programmer.
 - Jacky:The game tester, he helps us debugging.
-- Wu:The big fan.
+
+## Spacial Thanks:Our big fans Wu, the legendary player who got 10000 points.
