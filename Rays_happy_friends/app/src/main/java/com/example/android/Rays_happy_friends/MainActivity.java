@@ -30,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -45,13 +46,11 @@ public class MainActivity extends AppCompatActivity {
     private int mCount = 0;
     private TextView mShowCount;
     private View zeroview;
-    private View count_view;
-    private Long startTime;
-    private Handler handler = new Handler();
-    private Long remain_seconds;
     private int random_number ;
     private int old_number = 0;
     private int level = 0;
+    private int sbopen=0;
+    private int score_no;
 
     private boolean lock = true;
     private boolean pause = false;
@@ -59,14 +58,16 @@ public class MainActivity extends AppCompatActivity {
     private boolean stop_flag = false;
     private boolean left =false;
     private boolean level_change=false;
+    private boolean board_lock = false;
 
-    private long TimeSet = 60000;
+    private long TimeSet = 15000;
     private long TimeInterval = 1000;
     private long TotalTime = TimeSet;
     private long CurrentTime = TotalTime;
 
-    ArrayList allthescore=new ArrayList();
-    ArrayList transscore=new ArrayList();
+
+    int[] score_for_scoreboard = new int[5];
+    int[] score_for_main = new int[6];
 
 
 
@@ -77,7 +78,12 @@ public class MainActivity extends AppCompatActivity {
         mShowCount = (TextView) findViewById(R.id.show_count);
         ImageButton btn = (ImageButton)findViewById(R.id.angel_1);
         // Log.d("MainActivity", "P76071226");
-
+        for(int i=0; i<5; i++){
+            score_for_scoreboard[i] = -10000;
+        }
+        for(int i=0; i < 6; i++){
+            score_for_main[i] = -10000;
+        }
 
 
         Random x = new Random();
@@ -87,15 +93,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void launchScoreBoard() {
-        for(int i=0;i<allthescore.size();i++){
-            if(i%2==0){
-                
-            }
-        }
+        sbopen++;
+        //if(sbopen%2==0) {
+            score_for_main[0] = mCount;
 
-        Intent intent = new Intent(this, scoreboard.class);
-        intent.putExtra("count_send",mCount );
-        startActivity(intent);
+            Arrays.sort(score_for_main);
+           for (int i = 0; i < 5; i++) {
+                score_for_scoreboard[i] = score_for_main[i+1];
+           }
+            mCount = 0;
+
+            Intent intent = new Intent(this, scoreboard.class);
+            intent.putExtra("count_send", score_for_scoreboard);
+            startActivity(intent);
+        //}
+
     }
 
 
@@ -106,11 +118,13 @@ public class MainActivity extends AppCompatActivity {
     *             Since a toast always shows on the top,
     *             the passed in view is not used.
     */
-    public void showToast(View view) {
+    public void ShowToast(View view) {
         /*Toast toast = Toast.makeText(this, R.string.toast_message,
                 Toast.LENGTH_SHORT);
         toast.show();*/
+        board_lock = false;
         Intent intent=new Intent(this,scoreboard.class);
+        intent.putExtra("count_send", score_for_scoreboard);
         startActivity(intent);
     }
 
@@ -331,9 +345,11 @@ public class MainActivity extends AppCompatActivity {
         final TextView start_btn = findViewById(R.id.button_start);
         level_change=true;
 
+
         if(!left) {
             if (stop) {
                 stop_flag = true;
+                return;
             } else stop_flag = false;
         }
         left = false;
@@ -357,7 +373,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                launchScoreBoard();
+
                 time.setText("Times up!");
                 Show_Score_Toast();
                 start_btn.setText("Start");
@@ -368,7 +384,9 @@ public class MainActivity extends AppCompatActivity {
                 pause = false;
                 Switch_(old_number,(ImageButton) findViewById(R.id.angel_1),"angel");
                 level_change=false;
-                allthescore.add(mCount);
+                launchScoreBoard();
+
+
             }
 
             @Override
@@ -383,6 +401,10 @@ public class MainActivity extends AppCompatActivity {
 
                 Random x = new Random();
                 random_number = x.nextInt(16) + 1;
+                while(random_number == old_number){
+                    x = new Random();
+                    random_number = x.nextInt(16) + 1;
+                }
                 old_number = random_number;
                 lock = false;
                 Log.d("MAMAMIy", ""+random_number);
@@ -396,9 +418,9 @@ public class MainActivity extends AppCompatActivity {
 
 
                 if(stop_flag){
+                    this.cancel();
                     this.onFinish();
                     time.setText("Ready again?");
-                    this.cancel();
                 }
             }
 
