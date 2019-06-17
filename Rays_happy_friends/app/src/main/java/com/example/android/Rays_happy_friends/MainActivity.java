@@ -122,10 +122,14 @@ public class MainActivity extends AppCompatActivity {
         /*Toast toast = Toast.makeText(this, R.string.toast_message,
                 Toast.LENGTH_SHORT);
         toast.show();*/
-        board_lock = false;
-        Intent intent=new Intent(this,scoreboard.class);
-        intent.putExtra("count_send", score_for_scoreboard);
-        startActivity(intent);
+        if(!level_change){
+            board_lock = false;
+            Intent intent=new Intent(this,scoreboard.class);
+            intent.putExtra("count_send", score_for_scoreboard);
+            startActivity(intent);
+        }
+
+
     }
 
     /*
@@ -349,7 +353,8 @@ public class MainActivity extends AppCompatActivity {
         if(!left) {
             if (stop) {
                 stop_flag = true;
-                return;
+                if(!pause)
+                    return;
             } else stop_flag = false;
         }
         left = false;

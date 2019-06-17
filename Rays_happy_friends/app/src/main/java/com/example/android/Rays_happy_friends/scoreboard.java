@@ -28,15 +28,30 @@ public class scoreboard extends AppCompatActivity {
         count = intent.getIntArrayExtra("count_send");
 
        if(showcount != null)
-            showcount.setText(Integer.toString(count[4]) );
+           if(count[4] == -10000)
+               showcount.setText("-" );
+           else
+               showcount.setText(Integer.toString(count[4]) );
         if(showcount2 != null)
-            showcount2.setText(Integer.toString(count[3]));
+            if(count[3] == -10000)
+                showcount2.setText("-" );
+            else
+                showcount2.setText(Integer.toString(count[3]));
         if(showcount3 != null)
-            showcount3.setText(Integer.toString(count[2]) );
+            if(count[2] == -10000)
+                showcount3.setText("-" );
+            else
+                showcount3.setText(Integer.toString(count[2]) );
         if(showcount4 != null)
-            showcount4.setText(Integer.toString(count[1]) );
+            if(count[1] == -10000)
+                showcount4.setText("-" );
+            else
+                showcount4.setText(Integer.toString(count[1]) );
         if(showcount5 != null)
-            showcount5.setText(Integer.toString(count[0]) );
+            if(count[0] == -10000)
+                showcount5.setText("-" );
+            else
+                showcount5.setText(Integer.toString(count[0]) );
 
     }
 }

@@ -69,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/Rays_happy_friends/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+            <state relative-caret-position="179">
+              <caret line="356" column="20" selection-start-line="356" selection-start-column="20" selection-end-line="356" selection-end-column="20" />
               <folding>
                 <element signature="e#3355#4089#0" />
                 <element signature="e#4233#4516#0" />
@@ -94,7 +94,6 @@
                 <element signature="e#8565#8850#0" />
                 <element signature="e#11695#15991#0" />
                 <element signature="e#16308#16857#0" />
-                <element signature="e#16864#17445#0" />
               </folding>
             </state>
           </provider>
@@ -133,8 +132,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/Rays_happy_friends/scoreboard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
+            <state relative-caret-position="519">
+              <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,8 +174,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_scoreboard.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/Rays_happy_friends/scoreboard.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/Rays_happy_friends/scoreboard.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/android/Rays_happy_friends/MainActivity.java" />
       </list>
     </option>
@@ -463,16 +462,6 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/Rays_happy_friends/scoreboard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="36" column="60" selection-start-line="36" selection-start-column="60" selection-end-line="36" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -489,10 +478,20 @@
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/Rays_happy_friends/scoreboard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="519">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/android/Rays_happy_friends/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
+        <state relative-caret-position="179">
+          <caret line="356" column="20" selection-start-line="356" selection-start-column="20" selection-end-line="356" selection-end-column="20" />
           <folding>
             <element signature="e#3355#4089#0" />
             <element signature="e#4233#4516#0" />
@@ -516,7 +515,6 @@
             <element signature="e#8565#8850#0" />
             <element signature="e#11695#15991#0" />
             <element signature="e#16308#16857#0" />
-            <element signature="e#16864#17445#0" />
           </folding>
         </state>
       </provider>
