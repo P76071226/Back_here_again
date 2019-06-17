@@ -11,8 +11,10 @@ If you hit the angels, you will be punished by losing your score.
 You can pause or restart your game anytime.
 If you want to challenge higher level, you can push the button to change the difficulty.
 
-Ray:The game designer, he gives us the origin concept to create this game.
-Yao:The programmer.
-Clw:The programmer.
-Mao:The programmer.
-Jacky:The game tester, he helps us debugging.
+
+##The team members
+- Ray:The game designer, he gives us the origin concept to create this game.
+- Yao:The programmer.
+- Clw:The programmer.
+- Mao:The programmer.
+- Jacky:The game tester, he helps us debugging.
