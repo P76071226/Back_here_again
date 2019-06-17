@@ -17,6 +17,7 @@
 package com.example.android.Rays_happy_friends;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -28,6 +29,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -63,6 +65,11 @@ public class MainActivity extends AppCompatActivity {
     private long TotalTime = TimeSet;
     private long CurrentTime = TotalTime;
 
+    ArrayList allthescore=new ArrayList();
+    ArrayList transscore=new ArrayList();
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +83,19 @@ public class MainActivity extends AppCompatActivity {
         Random x = new Random();
         random_number = x.nextInt(20);
 
+
+    }
+
+    public void launchScoreBoard() {
+        for(int i=0;i<allthescore.size();i++){
+            if(i%2==0){
+                
+            }
+        }
+
+        Intent intent = new Intent(this, scoreboard.class);
+        intent.putExtra("count_send",mCount );
+        startActivity(intent);
     }
 
 
@@ -87,9 +107,11 @@ public class MainActivity extends AppCompatActivity {
     *             the passed in view is not used.
     */
     public void showToast(View view) {
-        Toast toast = Toast.makeText(this, R.string.toast_message,
+        /*Toast toast = Toast.makeText(this, R.string.toast_message,
                 Toast.LENGTH_SHORT);
-        toast.show();
+        toast.show();*/
+        Intent intent=new Intent(this,scoreboard.class);
+        startActivity(intent);
     }
 
     /*
@@ -335,6 +357,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                launchScoreBoard();
                 time.setText("Times up!");
                 Show_Score_Toast();
                 start_btn.setText("Start");
@@ -345,6 +368,7 @@ public class MainActivity extends AppCompatActivity {
                 pause = false;
                 Switch_(old_number,(ImageButton) findViewById(R.id.angel_1),"angel");
                 level_change=false;
+                allthescore.add(mCount);
             }
 
             @Override
