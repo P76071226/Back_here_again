@@ -12,7 +12,7 @@ You can pause or restart your game anytime.
 If you want to challenge higher level, you can push the button to change the difficulty.
 
 
-##The team members
+## The team members
 - Ray:The game designer, he gives us the origin concept to create this game.
 - Yao:The programmer.
 - Clw:The programmer.
